@@ -1,0 +1,34 @@
+<html>
+<body>
+    <!--
+    <h1> User Details</h1>
+    <lable>Name:</lable><br><br>
+
+    <input type="text" name="firstname">
+  <br><br>
+
+  <lable>DOB:<br><br>
+    <input type="text" name="DOB">
+    </lable>
+
+  <br>
+<br>
+<br>
+<button class="button" >Submit</button>-->
+<h1>login Page</h1>
+<div id="css">
+UserName:<br> <br>{{input valueBinding = "UserName" type = "text"}}<br/><br/>
+Password:<br><br>{{input  valueBinding = "Password" type="text"}}<br/><br/>
+Email-id:<br><br>{{input  valueBinding = "email" type="text"}}<br/><br/>
+</div>
+<button {{ action 'submitAction'}}>Submit</button>
+<!--
+  <div>
+  {{#link-to "about" class="button"}}
+
+  {{/link-to}}
+  </div>-->
+</body>
+
+</html>
+{{outlet}}
