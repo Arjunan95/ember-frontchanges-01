@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('result');
 
   this.route('login');
+  this.route('firstproperty');
 });
 
 export default Router;
