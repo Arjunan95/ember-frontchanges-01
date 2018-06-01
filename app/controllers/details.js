@@ -3,14 +3,14 @@ import Controller from '@ember/controller';
 export default Controller.extend({
     actions: {
         submitAction: function() {
-            var UserName = this.get('UserName');
-            console.log(UserName);
+            var username = this.get('username');
+            console.log(username);
             var email = this.get('email'); 
             console.log(email);
             var password = this.get('password');
             console.log(password);
             var login = {
-                "UserName":UserName,
+                "username":username,
                 "email":email,
                 "password":password
             }
@@ -30,7 +30,7 @@ export default Controller.extend({
             console.log("res123...>>>",response);
             alert(''+response.message+'');
 
-                if(email="arjun.sankar@rapidqube.com"){
+                if(email="manoj@rapidqube.com"){
                     this.transitionToRoute('result');
                     console.log(result)
                  }
