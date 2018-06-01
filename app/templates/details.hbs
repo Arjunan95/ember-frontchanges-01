@@ -16,18 +16,33 @@
 <br>
 <button class="button" >Submit</button>-->
 <h1>Login Page</h1>
+
+<form >
+  <select name="Select State" rows="1">
+    <option value="Select State">Select State</option>
+    <option value="TamilNadu">Tamil Nadu</option>
+    <option value="Maharastra">Maharastra</option>
+    <option value="Andhra Pradhesh">Andhra Pradhesh</option>
+    <option value="Uttra pradhesh">uttara pradhesh</option>
+  </select>
+  <br><br>
+  
+</form>
+
+
 <div id="css">
-UserName:<br> <br>{{input valueBinding = "UserName" type = "text"}}<br/><br/>
-Password:<br><br>{{input  valueBinding = "Password" type="text"}}<br/><br/>
-Email-id:<br><br>{{input  valueBinding = "email" type="text"}}<br/><br/>
+ 
+UserName:<br> <br>{{input type = "UserName" valueBinding='UserName'}}<br/><br/>
+
+Email-id:<br><br>{{input  type = "email" valueBinding='email'}}<br/><br/>
+Password:<br><br>{{input  type= "password" valueBinding='password'}}<br/><br/>
 </div>
 <button {{ action 'submitAction'}}>Submit</button>
 <!--
   <div>
   {{#link-to "about" class="button"}}
 
-  {{/link-to}}
-  </div>-->
+  {{/link-to}}  </div>-->
 </body>
 
 </html>

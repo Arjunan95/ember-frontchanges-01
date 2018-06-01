@@ -4,40 +4,48 @@ export default Controller.extend({
     actions: {
         submitAction: function() {
             var UserName = this.get('UserName');
-            var Password = this.get('Password');
-            var email = this.get('email');
+            console.log(UserName);
+            var email = this.get('email'); 
+            console.log(email);
+            var password = this.get('password');
+            console.log(password);
+            var login = {
+                "UserName":UserName,
+                "email":email,
+                "password":password
+            }
+
+
             
 
-           
-            this.set('UserName', UserName);
-            this.set('Password', Password);
-            this.set('email',email);
+            console.log('arjun',email);
             
-            
-            $.ajax({
-                type: 'POST',
-                url: "http://localhost:3005/login",
-                dataType: 'json',
-                data:{name:UserName,pass:Password,email:email} ,
-                cache: false,
-                success: function(result) {
-                if(result){
+            return $.ajax({
+            url:'http://localhost:8082/login',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(login),
+            success: function(response) {
+            console.log(JSON.stringify(response));
+            console.log("res123...>>>",response);
+            alert(''+response.message+'');
+
+                if(email="arjun.sankar@rapidqube.com"){
+                    this.transitionToRoute('result');
                     console.log(result)
-                  
-                  
-                    //alert(result)
-                  
-                    
-                }else{
-                    alert("error");
-                }
-                }
-            });
+                 }
+                 else
+                   console.log("Invalid Emailid and Password")
+                 
+                
+                }});
+            
+            }
         
- 
-            this.transitionToRoute('result');
+        
+            
         }
       }
     
-});
+);
 
